@@ -1,0 +1,7 @@
+*
+# Include useful:
+!poetry.lock
+!pyproject.toml
+!README.md
+!mwe_fastapi_debug
+!tests
