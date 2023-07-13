@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  app:
+    extends:
+      file: docker-compose.debug.yml
+      service: app
+    environment:
+      PYCHARM_DEBUGGER: "1"
+    expose:
+      - ${DEBUGGER_PORT:-5678}
+    network_mode: "host"
+
+    volumes:
+      - ./pydevd-pycharm.egg:/app/pydevd-pycharm.egg

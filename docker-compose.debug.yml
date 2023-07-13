@@ -1,0 +1,7 @@
+services:
+  app:
+    extends:
+      file: docker-compose.yml
+      service: app
+    volumes:
+      - ./mwe_fastapi_debug:/app/mwe_fastapi_debug

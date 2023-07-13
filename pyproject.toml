@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mwe-fastapi-debug"
-version = "0.1.0"
+version = "1.0.0"
 description = ""
 authors = ["IaroslavR <IaroslavR@users.noreply.github.com>"]
 readme = "README.md"
@@ -8,9 +8,10 @@ packages = [{include = "mwe_fastapi_debug"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+
 fastapi = "^0.100.0"
 uvicorn = "^0.22.0"
-pytest = "^7.4.0"
+pydantic-settings = "^2.0.2"
 
 [tool.poetry.scripts]
 mwe-fastapi = "mwe_fastapi_debug:main.main"
