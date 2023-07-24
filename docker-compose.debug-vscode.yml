@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  app:
+    extends:
+      file: docker-compose.yml
+      service: app
+    command:
+     - sh
+     - -c
+     - pip install debugpy -t /tmp && python /tmp/debugpy --wait-for-client --listen 0.0.0.0:${DEBUGGER_PORT:-5678} -m mwe_fastapi_debug.main
+    ports:
+      - ${DEBUGGER_PORT:-5678}:${DEBUGGER_PORT:-5678}

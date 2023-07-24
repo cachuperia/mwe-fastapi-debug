@@ -2,8 +2,8 @@ version: '3.8'
 
 services:
   app:
-    image: local/mwe-fastapi-debug:latest
+    image: local/mwe-fastapi:latest
     build:
       context: .
     ports:
-      - "8000:8000"
+      - ${APP_PORT:-8000}:${APP_PORT:-8000}

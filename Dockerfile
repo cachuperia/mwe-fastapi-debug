@@ -17,5 +17,6 @@ EOF
 
 FROM python:3.11.3-slim-bullseye as app
 ENV PATH="/app/.venv/bin:$PATH"
+WORKDIR /app
 COPY --from=base /app /app
 CMD mwe-fastapi

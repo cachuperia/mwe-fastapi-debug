@@ -1,1 +1,1 @@
-"""Minimal service example."""
+"""Minimal working example."""
